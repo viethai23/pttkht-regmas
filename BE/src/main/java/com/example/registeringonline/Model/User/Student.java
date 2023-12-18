@@ -25,4 +25,10 @@ public class Student extends User {
 
 	@Column(name = "faculty")
 	private String faculty;
+
+	@Column(name = "semester")
+	private int semester;
+
+	@Column(name = "school_year")
+	private int schoolYear;
 }
