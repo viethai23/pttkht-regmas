@@ -16,4 +16,6 @@ public interface RegisterRepository extends JpaRepository<Register, Integer> {
     List<Register> findByStudent(Student student);
 
     List<Register> findByCourse(Course course);
+
+    Register findByStudentAndCourse(Student st, Course c);
 }

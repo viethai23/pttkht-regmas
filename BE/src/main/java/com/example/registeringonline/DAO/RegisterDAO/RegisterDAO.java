@@ -14,4 +14,5 @@ public interface RegisterDAO {
 	List<Course> getRegisterCourse(Student s);
 	Instructor getInstructor(Course c);
 	List<Student> getListStudent(Course c);
+	boolean cancelRegister(Student t, Course c);
 }

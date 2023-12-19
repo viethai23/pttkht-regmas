@@ -21,11 +21,11 @@ public class Course {
 	@Column(name = "id")
 	private int id;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name = "subject_id")
 	private Subject subject;
 
-	@ManyToOne
+	@ManyToOne()
 	@JoinColumn(name = "instructor_id")
 	private Instructor instructor;
 

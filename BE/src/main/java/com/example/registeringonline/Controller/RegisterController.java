@@ -28,6 +28,11 @@ public class RegisterController {
         return registerDAO.confirmRegister(registerRequest.getStudent(), registerRequest.getCourse());
     }
 
+    @PostMapping("/cancel-register")
+    public boolean cancelRegister(@RequestBody RegisterRequest registerRequest) {
+        return registerDAO.cancelRegister(registerRequest.getStudent(), registerRequest.getCourse());
+    }
+
     @PostMapping("/timetable/{semester}/{year}")
     public List<Course> getTimetable(@RequestBody Student student, @PathVariable int semester, @PathVariable int year) {
         return registerDAO.getTimetable(student, semester, year);

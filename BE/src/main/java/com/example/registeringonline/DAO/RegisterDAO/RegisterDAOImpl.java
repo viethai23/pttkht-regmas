@@ -32,6 +32,13 @@ public class RegisterDAOImpl implements RegisterDAO {
 	}
 
 	@Override
+	public boolean cancelRegister(Student t, Course c) {
+		Register re = registerRepository.findByStudentAndCourse(t, c);
+		registerRepository.delete(re);
+		return true;
+	}
+
+	@Override
 	public List<Course> getTimetable(Student s, int semester, int year) {
 		List<Register> l = registerRepository.findByStudentAndSemesterAndSchoolYear(s, semester, year);
 		List<Course> l1 = new ArrayList<>();
